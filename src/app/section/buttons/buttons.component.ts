@@ -12,9 +12,9 @@ export class ButtonsComponent implements OnInit {
   @Output() clickEvent = new EventEmitter();
   constructor() {}
 
-  start() {
+  executeButton(command: string) {
     // 부모 컴포넌트에서 clickEvent 이름으로 잔달한 메소드를 실행
-    this.clickEvent.emit('change!');
+    this.clickEvent.emit(command);
   }
 
   ngOnInit() {}
