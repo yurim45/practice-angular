@@ -6,5 +6,9 @@
     <app-buttons (clickEvent)="startTime($event)"></app-buttons>
   </div>
 
-  <a [routerLink]="['/clock']">시계</a>
+  <a [routerLink]="['/clock']">시계로 이동(routerLink)</a>
+
+  <br />
+
+  <button type="button" (click)="goClock()">시계로 이동</button>
 </div>
