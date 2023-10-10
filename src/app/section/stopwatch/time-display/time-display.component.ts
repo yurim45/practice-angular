@@ -19,7 +19,18 @@ export class TimeDisplayComponent implements OnInit {
   constructor() {}
 
   timeStart() {
+    this.timeStop();
     this.timeInterval = setInterval(() => {
+      if (this.ms >= 100) {
+        this.ms = 0;
+        this.sec++;
+      }
+
+      if (this.sec >= 60) {
+        this.sec = 0;
+        this.min++;
+      }
+
       this.ms++;
     }, 10);
   }
@@ -29,6 +40,7 @@ export class TimeDisplayComponent implements OnInit {
   }
 
   timeReset() {
+    this.timeStop();
     this.min = 0;
     this.sec = 0;
     this.ms = 0;
