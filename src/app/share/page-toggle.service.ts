@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 //      - 해당 컴포넌트와 자식 컴포넌트에서 사용할 수 있음(트리 구조)
 //      - 대이터 공유가 가능
 //   3. @Injectable 데코레이션에 provideIn으로 등록
+//      - 앵귤러에서 추천하는 방법
 
 // angular의 injector 검색 순서
 //  ✣ 가장 먼저 만나는 providers 에 등록된 service를 사용
